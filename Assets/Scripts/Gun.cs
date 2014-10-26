@@ -30,7 +30,7 @@ public class Gun : MonoBehaviour {
             {
                 if (hit.collider.gameObject.tag == "Zombie")
                 {
-                    hit.collider.SendMessage("takeDamage");
+                    hit.collider.SendMessage("bulletHit", "type");
                 }
             }
         }

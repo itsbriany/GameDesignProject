@@ -8,13 +8,12 @@ public class BulletHit : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void takeDamage()
+    void bulletHit(string type)
     {
-        Debug.Log("Damage taken :O");
+        // different damage for different bullet types?
+        if (type == "type")
+        {
+            gameObject.SendMessage("modifyHealth", 1);
+        }
     }
 }
