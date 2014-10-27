@@ -207,13 +207,28 @@ ModelImporter:
             inSlope: 0
             outSlope: 0
             tangentMode: 0
-          - time: .283864766
+          - time: .243027776
+            value: 2
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: .313827991
             value: 0
             inSlope: 0
             outSlope: 0
             tangentMode: 0
-          - time: .585126102
-            value: .0250002146
+          - time: .48007971
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: .593625665
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: .647410512
+            value: 2
             inSlope: 0
             outSlope: 0
             tangentMode: 0
@@ -240,8 +255,8 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -259,17 +274,12 @@ ModelImporter:
             inSlope: 0
             outSlope: 0
             tangentMode: 0
-          - time: .280876577
-            value: 2
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - time: .368526042
+          - time: .376494199
             value: 0
             inSlope: 0
             outSlope: 0
             tangentMode: 0
-          - time: .496015906
+          - time: .527888596
             value: 2
             inSlope: 0
             outSlope: 0
