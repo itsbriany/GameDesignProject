@@ -22,7 +22,7 @@ public class Energy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameManager.SendMessage("updateGUI", gameObject.tag);
+        gameManager.SendMessage("updateGUI", "energy");
 
         if (energy == 0)
         {
