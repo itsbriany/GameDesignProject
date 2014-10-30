@@ -95,14 +95,26 @@ public class DerikControls : MonoBehaviour {
             anim.applyRootMotion = true;
         }
         
-        pullDown();
-		
+        //Animation functionalities
+       // pullDown();
         vault();
+        falling();
+        //resetAnimVariables();
 	}
 
-    void OnCollisionEnter(Collision collision){
-      
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.CompareTag("Climb")) { 
+            anim.SetBool("Climb", true);
+        }
     }
+
+    void OnTriggerExit(Collider other) {
+        if (other.gameObject.CompareTag("Climb")) { 
+            anim.SetBool("Climb", false);
+        }
+    }
+
+
 
     //Checks for vaulting obstacles
     void vault(){
@@ -129,7 +141,6 @@ public class DerikControls : MonoBehaviour {
 
     //Accelerates the character upon vault
     void vaultAccelerate(){
-        Debug.Log("Accelerating!");
         anim.applyRootMotion = false;
         rigidbody.AddForce(rigidbody.transform.forward * vaultAccelerateForce, ForceMode.Impulse);
         rigidbody.AddForce(rigidbody.transform.up * vaultAccelerateForce, ForceMode.Impulse);
@@ -154,6 +165,22 @@ public class DerikControls : MonoBehaviour {
 				anim.MatchTarget(hitInfo.point, Quaternion.identity, AvatarTarget.Root, new MatchTargetWeightMask(new Vector3(0, 1, 0), 0), 0.35f, 0.5f);
 			}
 		}
+    }
+
+    /*Checks if the character is falling*/
+    void falling() {
+        if (anim.rigidbody.velocity.y < -5) {
+            if(!anim.IsInTransition(0))
+                anim.SetBool("Falling", true);
+        } else { 
+            anim.SetBool("Falling", false);
+        }
+    }
+
+    /*Resets the animator variables*/
+    void resetAnimVariables() { 
+        if(anim.GetBool("Climb") == true)
+            anim.SetBool("Climb", false);
     }
 
 }

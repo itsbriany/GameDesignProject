@@ -1,0 +1,2 @@
+Please note that Derik will only climb up an obstacle if he
+collides with a trigger with the tag of "Wall"
