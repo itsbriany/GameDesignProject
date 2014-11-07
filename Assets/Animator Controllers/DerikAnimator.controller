@@ -1417,3 +1417,137 @@ StateMachine:
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 48, y: 24, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Base Layer
+  m_DefaultState: {fileID: 110200000}
+  m_States:
+  - {fileID: 110230196}
+  - {fileID: 110200000}
+  - {fileID: 110227030}
+  - {fileID: 110250718}
+  - {fileID: 110268214}
+  - {fileID: 110220369}
+  - {fileID: 110232316}
+  - {fileID: 110217126}
+  - {fileID: 110248013}
+  - {fileID: 110260296}
+  - {fileID: 110202100}
+<<<<<<< HEAD
+  - {fileID: 110242358}
+  - {fileID: 110212643}
+  - {fileID: 110230613}
+=======
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
+  m_ChildStateMachine: []
+  m_ChildStateMachinePosition: []
+  m_OrderedTransitions:
+    data:
+<<<<<<< HEAD
+      first: {fileID: 0}
+      second:
+      - {fileID: 110116405}
+=======
+      first: {fileID: 110202100}
+      second:
+      - {fileID: 110103652}
+    data:
+      first: {fileID: 0}
+      second: []
+    data:
+      first: {fileID: 110260296}
+      second:
+      - {fileID: 110177866}
+    data:
+      first: {fileID: 110248013}
+      second:
+      - {fileID: 110149216}
+    data:
+      first: {fileID: 110217126}
+      second:
+      - {fileID: 110109575}
+      - {fileID: 110189338}
+    data:
+      first: {fileID: 0}
+      second:
+      - {fileID: 110105580}
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
+    data:
+      first: {fileID: 110200000}
+      second:
+      - {fileID: 110100000}
+      - {fileID: 110189964}
+      - {fileID: 110163142}
+      - {fileID: 110184656}
+    data:
+      first: {fileID: 110230196}
+      second:
+      - {fileID: 110142790}
+      - {fileID: 110126279}
+    data:
+      first: {fileID: 110227030}
+      second:
+      - {fileID: 110100791}
+    data:
+      first: {fileID: 110250718}
+      second:
+      - {fileID: 110168564}
+      - {fileID: 110109296}
+      - {fileID: 110103990}
+      - {fileID: 110191922}
+      - {fileID: 110126724}
+<<<<<<< HEAD
+      - {fileID: 110116473}
+=======
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
+    data:
+      first: {fileID: 110268214}
+      second:
+      - {fileID: 110176845}
+    data:
+      first: {fileID: 110220369}
+      second:
+      - {fileID: 110126854}
+    data:
+      first: {fileID: 110232316}
+      second:
+      - {fileID: 110183743}
+      - {fileID: 110115635}
+      - {fileID: 110115101}
+<<<<<<< HEAD
+    data:
+      first: {fileID: 110217126}
+      second:
+      - {fileID: 110147198}
+      - {fileID: 110155945}
+      - {fileID: 110181003}
+      - {fileID: 110142840}
+    data:
+      first: {fileID: 110248013}
+      second:
+      - {fileID: 110149216}
+    data:
+      first: {fileID: 110260296}
+      second:
+      - {fileID: 110177866}
+    data:
+      first: {fileID: 110202100}
+      second:
+      - {fileID: 110103652}
+      - {fileID: 110170046}
+    data:
+      first: {fileID: 110242358}
+      second:
+      - {fileID: 110101368}
+    data:
+      first: {fileID: 110212643}
+      second:
+      - {fileID: 110197744}
+    data:
+      first: {fileID: 110230613}
+      second:
+      - {fileID: 110131357}
+=======
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
+  m_MotionSetCount: 1
+  m_AnyStatePosition: {x: 48, y: 24, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

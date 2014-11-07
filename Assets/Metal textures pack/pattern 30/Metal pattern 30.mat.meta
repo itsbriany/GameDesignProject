@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 0976e2e8b5e0adf4c8e289f6ffe1bf0f
+=======
+guid: 6412fc3d848100c499da33874dbf7c38
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
+labels:
+- Metal
+- Pattern
+- Raw
+- Rough
+- Silver
+NativeFormatImporter:
+  userData: 

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 5bba65c63b695c649ac7899016d93e0c
+=======
+guid: b581dd7f344f54a4a9477210a69989ac
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
+labels:
+- Industrial
+- Metal
+- Paint
+- Pattern
+- Rusty
+- Scratch
+- Steel
+NativeFormatImporter:
+  userData: 
