@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6fde2be4ec4033d43b68646822e04afe
+=======
+guid: cd2bacc2d3a80ca43b6a71600e4cbf46
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
 labels:
 - Mixamo
 - Character

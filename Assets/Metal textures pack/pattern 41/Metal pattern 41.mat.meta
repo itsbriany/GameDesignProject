@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d9ca5b2e2dec91642910d8ad4fec4507
+=======
+guid: d953cc3916a287a4bb860d1b165577c5
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
 labels:
 - Industrial
 - Metal

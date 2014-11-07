@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: bf20a02c102feea489ab996531c526c6
+=======
+guid: 093b8460bff837e41bf64ba390b5489f
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
 labels:
 - Metal
 - Pattern

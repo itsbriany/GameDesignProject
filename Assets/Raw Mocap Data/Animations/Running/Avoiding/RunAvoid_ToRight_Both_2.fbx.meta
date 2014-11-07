@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5048f3ba2a3958f49bd22a2dc49e27ae
+=======
+guid: edc2d2860810a6f4a844847c8173412e
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:

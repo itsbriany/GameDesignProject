@@ -3,10 +3,13 @@
 --- !u!78 &1
 TagManager:
   tags:
+<<<<<<< HEAD
   - ClimbTrigger
   - Wall
   - Obstacle
   - 
+=======
+>>>>>>> 554c4b8498ab8dcd97454475588373728bc1e89a
   - Climb
   - 
   Builtin Layer 0: Default
