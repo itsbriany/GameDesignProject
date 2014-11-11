@@ -233,7 +233,6 @@ GameObject:
   - 64: {fileID: 1893824730}
   - 23: {fileID: 1893824729}
   - 114: {fileID: 1893824728}
-  - 114: {fileID: 1893824733}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -249,7 +248,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1893824727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5952a4fbadf74098ad5bd13385b2b36, type: 3}
+  m_Script: {fileID: 11500000, guid: 705711fe0964f44b4ae5ce7e53b84224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 2800000, guid: a4b13b6905dcc4265967ac82e8f757c4, type: 3}
@@ -310,20 +309,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &1893824733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1893824727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d76559b530a6a43b1a79ecc4e7b36f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerIcon: {fileID: 2800000, guid: 63a262f7d26a944fa9b20e51f5abdc47, type: 3}
-  playerIcons:
-  - {fileID: 2800000, guid: 63a262f7d26a944fa9b20e51f5abdc47, type: 3}
-  healthBar: {fileID: 2800000, guid: 1354fde7701214aa8aeb30872ee3c143, type: 3}
-  staminaBar: {fileID: 2800000, guid: 1b84a3ebb1a2a4c2ca2d74b634d8d8df, type: 3}
-  emptyBar: {fileID: 2800000, guid: 1506dfa33ec2a4533a5bb002ab942ce9, type: 3}

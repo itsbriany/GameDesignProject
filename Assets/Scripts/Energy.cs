@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Energy : MonoBehaviour {
-    public int energy = 0;    
-    public GameObject gameManager;
+    public float energy = 0.0f;    
+    public PlayerHUD hud;
 
 	// Use this for initialization
 	void Start () {
@@ -12,17 +12,11 @@ public class Energy : MonoBehaviour {
             Debug.Log("Set energy object energy to be greater than 1");
             this.enabled = false;
         }
-
-        if (!gameManager)
-        {
-            Debug.Log("Add game manager object to the energy object");
-            this.enabled = false;
-        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        gameManager.SendMessage("updateGUI", "energy");
+		hud.setEnergy(energy);
 
         if (energy == 0)
         {
@@ -30,8 +24,13 @@ public class Energy : MonoBehaviour {
         }
 	}
 
-    void modifyEnergy(int points)
+    public void modifyEnergy(float points)
     {
         energy += points;
     }
+
+	public float getEnergy()
+	{
+		return energy;
+	}
 }
