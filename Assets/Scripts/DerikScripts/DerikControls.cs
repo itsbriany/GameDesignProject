@@ -52,6 +52,15 @@ public class DerikControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        if(Input.GetKey(KeyCode.Z)){
+            aimMode();
+        }
+        else{
+            normalMode();
+        }
+	}
+
+    void normalMode(){
 	    float h = Input.GetAxis("Horizontal");				// setup h variable as our horizontal input axis
 		float v = Input.GetAxis("Vertical");				// setup v variables as our vertical input axis
 		anim.SetFloat("Speed", v);							// set our animator's float parameter 'Speed' equal to the vertical input axis				
@@ -120,7 +129,12 @@ public class DerikControls : MonoBehaviour {
         roll();
         climbHigh();
         grounded();
-	}
+
+    }
+
+    void aimMode(){
+
+    }
 
     //Checks for vaulting obstacles
     void vault(){
