@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class Health : MonoBehaviour {
-    public int health = 0;    
-    public GameObject gameManager;
+    public float health = 0.0f;
     public bool isPlayer = false;
+
+	public PlayerHUD hud;
 
 	// Use this for initialization
 	void Start () {
@@ -13,19 +14,15 @@ public class Health : MonoBehaviour {
             Debug.Log("Set health object health to be greater than 0");
             this.enabled = false;
         }
-
-        if (!gameManager)
-        {
-            Debug.Log("Add game manager object to the health object");
-            this.enabled = false;
-        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (isPlayer)
         {
-            gameManager.SendMessage("updateGUI", "health");
+
+            // Update HUD Health
+			hud.setHealth(health);
         }
 
         if (health == 0)
@@ -34,8 +31,13 @@ public class Health : MonoBehaviour {
         }
 	}
 
-    void modifyHealth(int points)
+    public void modifyHealth(float points)
     {
         health += points;
     }
+
+	public float getHealth()
+	{
+		return health;
+	}
 }
