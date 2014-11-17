@@ -5,16 +5,27 @@ public class ObjectivesHUD : MonoBehaviour {
 
 	public Texture2D objectiveSquare;
 	public Texture2D objectivePointer;
+	public GameObject derikPosition;
 
 	// Temp
-	public GameObject currentObjective;
+	private GameObject currentObjective;
+	private string currentTask;
+	private bool displayObjectiveTask = false;
+	private int i;
+	public GameObject[] objectives;
+	public string[] objectiveTask;
 	public bool onScreen;
 	public Vector3 currentScreenPos;
 	public float pointerAngle;
 
+	private string levelCleared = "Congrats! You cleared the level!";
+
 	// Use this for initialization
 	void Start () {
-	
+		i = 0;
+		currentObjective = objectives[i];
+		currentTask = objectiveTask[i];
+		displayObjectiveTask = true;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +33,23 @@ public class ObjectivesHUD : MonoBehaviour {
 		// Update current objective here...
 		// GameObject currentObjective = new current objective
 		isTargetOnScreen(currentObjective);
+		if (isObjectiveCleared())
+		{
+			//Switch to next objective.
+			i++;
+			if (i < objectives.Length)
+			{
+				currentObjective = objectives[i];
+				currentTask = objectiveTask[i];
+				displayObjectiveTask = true;
+			}
+			if (i == objectives.Length)
+			{
+				//Last objective cleared. Next level
+				currentTask = levelCleared;
+				displayObjectiveTask = true;
+			}
+		}
 	}
 
 	void isTargetOnScreen(GameObject obj) {
@@ -94,6 +122,12 @@ public class ObjectivesHUD : MonoBehaviour {
 
 	void OnGUI()
 	{
+		if (displayObjectiveTask)
+		{
+			GUI.Box(new Rect(Screen.width/2.5f, Screen.height/3, Screen.width/4, Screen.height/10), currentTask);
+			StartCoroutine(closeGUI());
+		}
+
 		if (onScreen)
 		{
 			GUI.DrawTexture(new Rect(currentScreenPos.x, Screen.height - currentScreenPos.y, 10, 10), objectiveSquare);
@@ -102,6 +136,26 @@ public class ObjectivesHUD : MonoBehaviour {
 		{
 			GUIUtility.RotateAroundPivot (pointerAngle, new Vector2(currentScreenPos.x, Screen.height - currentScreenPos.y));
 			GUI.DrawTexture(new Rect(currentScreenPos.x, Screen.height - currentScreenPos.y, 10, 10), objectivePointer);
+		}
+	}
+
+	bool isObjectiveCleared()
+	{
+		float distance = Vector3.Distance(derikPosition.transform.position, currentObjective.transform.position);
+		if (distance <= 3)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	IEnumerator closeGUI() {
+		yield return new WaitForSeconds(6);
+		displayObjectiveTask = false;
+		if (currentTask == levelCleared)
+		{
+			//Application.LoadLevel("Main Menu");
+			Application.LoadLevel("Chapter1");
 		}
 	}
 }

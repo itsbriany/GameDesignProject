@@ -268,6 +268,8 @@ GameObject:
   - 54: {fileID: 5400000}
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Derik
   m_TagString: Untagged
@@ -831,7 +833,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
   m_LocalRotation: {x: 0, y: -.0278696176, z: 0, w: .999611616}
-  m_LocalPosition: {x: 7.14756966, y: 11.0388784, z: -20.0452461}
+  m_LocalPosition: {x: 1.98219454, y: 6.44426174e-17, z: 692.773315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400036}
@@ -1162,12 +1164,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 100034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bd4fd4d3a828f438926f10371a5fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: 597480b4398f7e94cb2328f9dbff6394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 10
-  vaultDistance: 5.5999999
-  vaultAccelerateForce: 2.29999995
+  vaultDistance: 2
+  vaultAccelerateForce: 10
+  animatorSpeed: 1
+  JumpOffRaycastDistance: 3
+  jumpForward: .5
+  rollTolerance: -4
+  climbRaycastDistanceUp: 4
+  climbRaycastDistanceForward: 0
+  energyDecreaseRate: -.200000003
+  energyIncreaseRate: .5
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e337d851de0db614bbecab2405773318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 100
+  hud: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1dfccc874bec64ea8d5634f1bb77ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  isPlayer: 1
+  hud: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

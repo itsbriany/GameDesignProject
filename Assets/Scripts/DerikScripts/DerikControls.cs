@@ -17,8 +17,11 @@ public class DerikControls : MonoBehaviour {
     public float rollTolerance = -4.0f; //Tolerance z velocity for rolling
     public float climbRaycastDistanceUp = 4.0f;//Distance betweem character and climbing trigger
     public float climbRaycastDistanceForward = 0; //Distance between the character and the wall to be climbed
+	public float energyDecreaseRate = -0.2f;
+	public float energyIncreaseRate = 0.5f;
 
     private Animator anim;
+	private Energy nrg;
     private AnimatorStateInfo currentBaseState;
     private CapsuleCollider col;
     private Transform JumpOffRaycast; 
@@ -45,6 +48,7 @@ public class DerikControls : MonoBehaviour {
 	void Start () {
 	    anim = transform.GetComponent<Animator>();
         col = transform.GetComponent<CapsuleCollider>();
+		nrg = GetComponent<Energy>();
         JumpOffRaycast = transform.FindChild("JumpOffRaycast");
         ClimbUpRaycast = transform.FindChild("ClimbUpRaycast");
         isGrounded = true;
@@ -67,10 +71,16 @@ public class DerikControls : MonoBehaviour {
 		anim.SetFloat("Direction", h);
         currentBaseState = anim.GetCurrentAnimatorStateInfo(0); //returns the current animation state at layer 0
 
-        if(Input.GetKey(KeyCode.LeftShift)){
-            anim.SetBool("Run", true);
-        }else
-            anim.SetBool("Run", false);
+		if(Input.GetKey(KeyCode.LeftShift) && (nrg.getEnergy() > 0)){
+			anim.SetBool("Run", true);
+			nrg.modifyEnergy(energyDecreaseRate);
+		}else {
+			anim.SetBool("Run", false);
+			// Only start increasing the energy if the user is no longer holding down shift
+			if(nrg.getEnergy () < 100 && (!Input.GetKey (KeyCode.LeftShift))) {
+				nrg.modifyEnergy (energyIncreaseRate);
+			}
+		}
 
         if(Input.GetKeyDown(KeyCode.Space)){
             anim.SetBool("Jump", true);
