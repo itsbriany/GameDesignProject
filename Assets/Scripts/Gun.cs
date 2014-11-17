@@ -6,13 +6,6 @@ public class Gun : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        crossHair = GameObject.Find("crossHair");
-        if (!crossHair)
-        {
-            Debug.Log("Gun object needs crosshair");
-            this.enabled = false;
-        }
-
         if (!Camera.main)
         {
             Debug.Log("Gun object needs main camera");
@@ -23,7 +16,7 @@ public class Gun : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Camera.main.WorldToScreenPoint(crossHair.transform.position));
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit))

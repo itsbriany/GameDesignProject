@@ -40,7 +40,11 @@ public class DerikControls : MonoBehaviour {
     static int fallingState = Animator.StringToHash("Base Layer.Falling");
     static int climbHighState = Animator.StringToHash("Base Layer.ClimbHigh");
 
+    //aim mode vars
+    private Transform aimobject;
+    private SmoothFollow camscript;
     
+    public Texture2D aimCursor;
 	
 	//static int waveState = Animator.StringToHash("Layer2.Wave")
 
@@ -52,6 +56,16 @@ public class DerikControls : MonoBehaviour {
         JumpOffRaycast = transform.FindChild("JumpOffRaycast");
         ClimbUpRaycast = transform.FindChild("ClimbUpRaycast");
         isGrounded = true;
+
+        // aim mode vars init
+        aimobject = transform.FindChild("aimobject");
+        camscript = Camera.main.GetComponent<SmoothFollow>();
+
+        if (!aimCursor)
+        {
+            Debug.Log("Need aim cursor texture to change to on aimMode");
+            this.enabled = false;
+        }
 	}
 	
 	// Update is called once per frame
@@ -60,6 +74,14 @@ public class DerikControls : MonoBehaviour {
             aimMode();
         }
         else{
+            if (camscript.target == aimobject)
+            {
+                camscript.target = transform;
+                camscript.distance = 3.73f;
+                camscript.height = 2.15f;
+
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            }
             normalMode();
         }
 	}
@@ -143,7 +165,11 @@ public class DerikControls : MonoBehaviour {
     }
 
     void aimMode(){
+        camscript.target = aimobject;
+        camscript.distance = 3.3f;
+        camscript.height = 1.0f;
 
+        Cursor.SetCursor(aimCursor, Vector2.zero, CursorMode.Auto);
     }
 
     //Checks for vaulting obstacles
