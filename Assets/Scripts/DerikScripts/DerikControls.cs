@@ -64,7 +64,7 @@ public class DerikControls : MonoBehaviour {
         if (!aimCursor)
         {
             Debug.Log("Need aim cursor texture to change to on aimMode");
-            this.enabled = false;
+            //this.enabled = false;
         }
 	}
 	
@@ -74,13 +74,16 @@ public class DerikControls : MonoBehaviour {
             aimMode();
         }
         else{
-            if (camscript.target == aimobject)
+            if (camscript) 
             {
-                camscript.target = transform;
-                camscript.distance = 3.73f;
-                camscript.height = 2.15f;
+                if (camscript.target == aimobject)
+                {
+                    camscript.target = transform;
+                    camscript.distance = 3.73f;
+                    camscript.height = 2.15f;
 
-                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                    Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                }
             }
             normalMode();
         }
@@ -92,7 +95,7 @@ public class DerikControls : MonoBehaviour {
 		anim.SetFloat("Speed", v);							// set our animator's float parameter 'Speed' equal to the vertical input axis				
 		anim.SetFloat("Direction", h);
         currentBaseState = anim.GetCurrentAnimatorStateInfo(0); //returns the current animation state at layer 0
-
+        Debug.Log("Velocity: " + rigidbody.velocity);
 		if(Input.GetKey(KeyCode.LeftShift) && (nrg.getEnergy() > 0)){
 			anim.SetBool("Run", true);
 			nrg.modifyEnergy(energyDecreaseRate);
@@ -220,6 +223,7 @@ public class DerikControls : MonoBehaviour {
        // Debug.DrawRay(JumpOffRaycast.position, -rigidbody.transform.up);
         RaycastHit hitInfo = new RaycastHit();
         if(Physics.Raycast(ray, out hitInfo)){
+          //  Debug.Log("Hit info distance: " + hitInfo.distance);
             if(hitInfo.distance > JumpOffRaycastDistance){
                 anim.SetBool("JumpOff", true);
             }else{
@@ -230,8 +234,12 @@ public class DerikControls : MonoBehaviour {
         if(currentBaseState.nameHash == jumpOffState){ 
             rigidbody.velocity = rigidbody.velocity;
             anim.applyRootMotion = false;
-            anim.rigidbody.AddForce(anim.rigidbody.transform.up * jumpForward, ForceMode.Impulse);
-            anim.rigidbody.AddForce(anim.rigidbody.transform.forward * jumpForward, ForceMode.Impulse);
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x * 1.1f, jumpForward, 0);
+            /*
+            if (!anim.IsInTransition(0)) {
+                anim.rigidbody.AddForce(anim.rigidbody.transform.up * jumpForward, ForceMode.VelocityChange);
+                anim.rigidbody.AddForce(anim.rigidbody.transform.forward * jumpForward, ForceMode.VelocityChange);
+            } */       
         }
     }
 
