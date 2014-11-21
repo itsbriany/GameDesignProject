@@ -6,6 +6,7 @@ public class ObjectivesHUD : MonoBehaviour {
 	public Texture2D objectiveSquare;
 	public Texture2D objectivePointer;
 	public GameObject derikPosition;
+	public Score scoresystem;
 
 	// Temp
 	private GameObject currentObjective;
@@ -14,9 +15,11 @@ public class ObjectivesHUD : MonoBehaviour {
 	private int i;
 	public GameObject[] objectives;
 	public string[] objectiveTask;
-	public bool onScreen;
-	public Vector3 currentScreenPos;
-	public float pointerAngle;
+	private bool onScreen;
+	private Vector3 currentScreenPos;
+	private float pointerAngle;
+	private int totalScore = 10000;
+	private int scoreAmt;
 
 	private string levelCleared = "Congrats! You cleared the level!";
 
@@ -26,29 +29,34 @@ public class ObjectivesHUD : MonoBehaviour {
 		currentObjective = objectives[i];
 		currentTask = objectiveTask[i];
 		displayObjectiveTask = true;
+		StartCoroutine(closeGUI());
+		scoreAmt = totalScore/objectives.Length;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		// Update current objective here...
-		// GameObject currentObjective = new current objective
 		isTargetOnScreen(currentObjective);
+
 		if (isObjectiveCleared())
 		{
 			//Switch to next objective.
 			i++;
+			scoresystem.addPoints(scoreAmt);
 			if (i < objectives.Length)
 			{
+				//Move to next objective
 				currentObjective = objectives[i];
 				currentTask = objectiveTask[i];
 				displayObjectiveTask = true;
 			}
 			if (i == objectives.Length)
 			{
-				//Last objective cleared. Next level
+				//Last objective cleared. Go to next level
+				currentObjective = null;
 				currentTask = levelCleared;
 				displayObjectiveTask = true;
 			}
+			StartCoroutine(closeGUI());
 		}
 	}
 
@@ -125,7 +133,6 @@ public class ObjectivesHUD : MonoBehaviour {
 		if (displayObjectiveTask)
 		{
 			GUI.Box(new Rect(Screen.width/2.5f, Screen.height/3, Screen.width/4, Screen.height/10), currentTask);
-			StartCoroutine(closeGUI());
 		}
 
 		if (onScreen)
@@ -154,8 +161,12 @@ public class ObjectivesHUD : MonoBehaviour {
 		displayObjectiveTask = false;
 		if (currentTask == levelCleared)
 		{
-			//Application.LoadLevel("Main Menu");
-			Application.LoadLevel("Chapter1");
+			// TODO: Load next level
+			/*if (Application.loadedLevelName == "Chapter1")
+			{
+				Application.LoadLevel ("Chapter2");
+			}*/
+			Application.LoadLevel("MainMenu");
 		}
 	}
 }

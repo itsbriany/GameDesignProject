@@ -2,13 +2,17 @@
 using System.Collections;
 
 public class Health : MonoBehaviour {
-    public float health = 0.0f;
+    public float health = 100.0f;
     public bool isPlayer = false;
+	public int scoreAmt = -200;
+	private Vector3 spawnPosition;
 
 	public PlayerHUD hud;
+	public Score scoresystem;
 
 	// Use this for initialization
 	void Start () {
+		spawnPosition = this.gameObject.transform.position;
         if (health == 0)
         {
             Debug.Log("Set health object health to be greater than 0");
@@ -20,10 +24,14 @@ public class Health : MonoBehaviour {
 	void Update () {
         if (isPlayer)
         {
-
             // Update HUD Health
 			hud.setHealth(health);
         }
+
+		if (isPlayer && health == 0)
+		{
+			killDerik();
+		}
 
         if (health == 0)
         {
@@ -33,11 +41,31 @@ public class Health : MonoBehaviour {
 
     public void modifyHealth(float points)
     {
-        health += points;
+		if (health + points > 100.0f)
+		{
+			health = 100.0f;
+		}
+		else if (health + points < 0.0f)
+		{
+			health = 0.0f;
+		}
+		else {
+			health += points;
+		}
     }
 
 	public float getHealth()
 	{
 		return health;
+	}
+
+	void killDerik()
+	{
+		// play music
+		// remove points
+		// move Derik back to respawn position and add health back
+		this.gameObject.transform.position = spawnPosition;
+		health = 100.0f;
+		scoresystem.addPoints(scoreAmt);
 	}
 }
