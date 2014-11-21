@@ -1,26 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+	/*
+		 * Add points for each objective cleared
+		 * Remove points for each death
+		 * At EOG, add bonus points for time completion, zombies killed
+	 */
+
 public class Score : MonoBehaviour {
     int score = 0;
-    public GameObject gameManager;
 
 	// Use this for initialization
 	void Start () {
-        if (!gameManager)
-        {
-            Debug.Log("Add game manager object to the health object");
-            this.enabled = false;
-        }
+		score = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        gameManager.SendMessage("updateGUI", "score");
 	}
 
-    void modifyScore(int points)
-    {
-        score += points;
-    }
+	void OnGUI () {
+		GUI.Box(new Rect(Screen.width - Screen.width/8, Screen.height/25, Screen.width/10, Screen.height/20), "Score: " + score);
+	}
+
+	public void addPoints(int points)
+	{
+		if (score + points < 0)
+		{
+			score = 0;
+		}
+		else
+		{
+			score += points;
+		}
+	}
 }
