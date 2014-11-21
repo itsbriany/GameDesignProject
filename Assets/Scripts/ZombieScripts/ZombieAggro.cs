@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof (AudioSource))]
 public class ZombieAggro : MonoBehaviour {
     public float moveSpeed = 10f;
     public float rotationSpeed = 10f;
@@ -8,10 +9,17 @@ public class ZombieAggro : MonoBehaviour {
 
     bool aggro = false;
     GameObject player;
+    
+    // AudioSource components on the gameobject need to be added in this order
+    AudioSource aggroSource, attackSource;
+    AudioSource[] audSource;
 
 	// Use this for initialization
 	void Start () {
 	    player = GameObject.Find("Derik");
+        audSource = transform.GetComponents<AudioSource>();
+        aggroSource = audSource[0];
+        attackSource = audSource[1];
 	}
 	
 	// Update is called once per frame
@@ -50,7 +58,7 @@ public class ZombieAggro : MonoBehaviour {
 
     void attack()
     {
-
+        attackSource.Play();
     }
 
     void OnTriggerEnter(Collider other)
@@ -58,6 +66,7 @@ public class ZombieAggro : MonoBehaviour {
         if (other.tag == "Player")
         {
             aggro = true;
+            aggroSource.Play();
         }
     }
 
