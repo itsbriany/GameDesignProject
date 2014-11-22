@@ -43,6 +43,7 @@ public class DerikControls : MonoBehaviour {
     //aim mode vars
     private Transform aimobject;
     private SmoothFollow camscript;
+    private Gun gun;
     
     public Texture2D aimCursor;
 	
@@ -60,6 +61,7 @@ public class DerikControls : MonoBehaviour {
         // aim mode vars init
         aimobject = transform.FindChild("aimobject");
         camscript = Camera.main.GetComponent<SmoothFollow>();
+        gun = transform.GetComponent<Gun>();
 
         if (!aimCursor)
         {
@@ -82,6 +84,7 @@ public class DerikControls : MonoBehaviour {
 
                 Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             }
+            gun.enabled = false;
             normalMode();
         }
 	}
@@ -165,6 +168,7 @@ public class DerikControls : MonoBehaviour {
     }
 
     void aimMode(){
+        gun.enabled = true;
         camscript.target = aimobject;
         camscript.distance = 3.3f;
         camscript.height = 1.0f;
