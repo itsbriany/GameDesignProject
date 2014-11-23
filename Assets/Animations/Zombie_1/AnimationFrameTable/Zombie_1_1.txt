@@ -1,0 +1,18 @@
+20-80      loop   idle0
+94-144     loop   walk
+157-181    loop   run
+195-255    noloop attack0
+264-294    noloop attack1
+305-320    noloop wound
+332-372    noloop death
+
+
+
+
+
+
+
+
+
+
+

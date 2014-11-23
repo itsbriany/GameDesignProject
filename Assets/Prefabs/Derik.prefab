@@ -616,7 +616,37 @@ GameObject:
   m_Component:
   - 4: {fileID: 400080}
   m_Layer: 0
-  m_Name: aimobject
+  m_Name: ClimbUpRaycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400082}
+  m_Layer: 0
+  m_Name: Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400084}
+  m_Layer: 0
+  m_Name: JumpOffRaycast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,12 +878,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
   m_LocalRotation: {x: 0, y: -.0278696176, z: 0, w: .999611616}
-  m_LocalPosition: {x: 1.98219454, y: 6.44426174e-17, z: 692.773315}
+  m_LocalPosition: {x: -16.6372166, y: -.109592438, z: 691.53479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400036}
   - {fileID: 400008}
+  - {fileID: 400084}
   - {fileID: 400080}
+  - {fileID: 400082}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400036
@@ -1149,7 +1181,31 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .698899984, y: 1.0237, z: 2.54640007}
+  m_LocalPosition: {x: 0, y: 1, z: .340000004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400034}
+  m_RootOrder: 3
+--- !u!4 &400082
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400034}
+  m_RootOrder: 4
+--- !u!4 &400084
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400034}
@@ -1196,31 +1252,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpSpeed: 10
-  vaultDistance: 2
-  vaultAccelerateForce: 10
+  vaultDistance: 5.5999999
+  vaultAccelerateForce: 2.29999995
   animatorSpeed: 1
   JumpOffRaycastDistance: 3
-  jumpForward: .5
-  rollTolerance: -4
-  climbRaycastDistanceUp: 4
-  climbRaycastDistanceForward: 0
+  jumpForward: .230000004
+  rollTolerance: 5
+  climbRaycastDistanceUp: 2
+  climbRaycastDistanceForward: .5
   energyDecreaseRate: -.200000003
   energyIncreaseRate: .5
-  aimCursor: {fileID: 2800000, guid: bf888383ffe857b4ba159f44c9ad6371, type: 3}
+  aimCursor: {fileID: 0}
 --- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e337d851de0db614bbecab2405773318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energy: 100
-  hud: {fileID: 0}
---- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1231,8 +1274,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1dfccc874bec64ea8d5634f1bb77ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  isPlayer: 1
+  health: 0
+  isPlayer: 0
+  hud: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e337d851de0db614bbecab2405773318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 0
   hud: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:

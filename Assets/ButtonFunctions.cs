@@ -22,7 +22,7 @@ public class ButtonFunctions : MonoBehaviour {
 		{
 			level2.GetComponent<Button>().interactable = false;
 			level3.GetComponent<Button>().interactable = false;
-			level2.GetComponent<Button>().transition = "Disabled";
+
 		}
 		else if (currentLevel == 2)
 		{
