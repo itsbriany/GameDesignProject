@@ -35,28 +35,31 @@ public class ObjectivesHUD : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		isTargetOnScreen(currentObjective);
-
-		if (isObjectiveCleared())
+		if (currentObjective != null)
 		{
-			//Switch to next objective.
-			i++;
-			scoresystem.addPoints(scoreAmt);
-			if (i < objectives.Length)
+			isTargetOnScreen(currentObjective);
+
+			if (isObjectiveCleared())
 			{
-				//Move to next objective
-				currentObjective = objectives[i];
-				currentTask = objectiveTask[i];
-				displayObjectiveTask = true;
+				//Switch to next objective.
+				i++;
+				scoresystem.addPoints(scoreAmt);
+				if (i < objectives.Length)
+				{
+					//Move to next objective
+					currentObjective = objectives[i];
+					currentTask = objectiveTask[i];
+					displayObjectiveTask = true;
+				}
+				if (i == objectives.Length)
+				{
+					//Last objective cleared. Go to next level
+					currentObjective = null;
+					currentTask = levelCleared;
+					displayObjectiveTask = true;
+				}
+				StartCoroutine(closeGUI());
 			}
-			if (i == objectives.Length)
-			{
-				//Last objective cleared. Go to next level
-				currentObjective = null;
-				currentTask = levelCleared;
-				displayObjectiveTask = true;
-			}
-			StartCoroutine(closeGUI());
 		}
 	}
 
@@ -135,14 +138,17 @@ public class ObjectivesHUD : MonoBehaviour {
 			GUI.Box(new Rect(Screen.width/2.5f, Screen.height/3, Screen.width/4, Screen.height/10), currentTask);
 		}
 
-		if (onScreen)
+		if (currentObjective != null)
 		{
-			GUI.DrawTexture(new Rect(currentScreenPos.x, Screen.height - currentScreenPos.y, 10, 10), objectiveSquare);
-		}
-		else
-		{
-			GUIUtility.RotateAroundPivot (pointerAngle, new Vector2(currentScreenPos.x, Screen.height - currentScreenPos.y));
-			GUI.DrawTexture(new Rect(currentScreenPos.x, Screen.height - currentScreenPos.y, 10, 10), objectivePointer);
+			if (onScreen)
+			{
+				GUI.DrawTexture(new Rect(currentScreenPos.x, Screen.height - currentScreenPos.y, 10, 10), objectiveSquare);
+			}
+			else
+			{
+				GUIUtility.RotateAroundPivot (pointerAngle, new Vector2(currentScreenPos.x, Screen.height - currentScreenPos.y));
+				GUI.DrawTexture(new Rect(currentScreenPos.x, Screen.height - currentScreenPos.y, 10, 10), objectivePointer);
+			}
 		}
 	}
 
@@ -161,12 +167,9 @@ public class ObjectivesHUD : MonoBehaviour {
 		displayObjectiveTask = false;
 		if (currentTask == levelCleared)
 		{
-			// TODO: Load next level
-			/*if (Application.loadedLevelName == "Chapter1")
-			{
-				Application.LoadLevel ("Chapter2");
-			}*/
-			Application.LoadLevel("MainMenu");
+			// TODO: Load score screen
+			scoresystem.setClearTime(Time.time);
+			Application.LoadLevel("ScoreScreen");
 		}
 	}
 }

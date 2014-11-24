@@ -22,8 +22,8 @@ public class Gun : MonoBehaviour {
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.gameObject.tag == "Zombie")
-                {
-                    hit.collider.SendMessage("bulletHit", "type");
+                {   
+                    hit.collider.SendMessage("bulletHit", "gun");
                 }
             }
         }

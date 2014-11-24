@@ -10,9 +10,12 @@ public class Health : MonoBehaviour {
 	public PlayerHUD hud;
 	public Score scoresystem;
 
+    private float maxHealth;
+
 	// Use this for initialization
 	void Start () {
 		spawnPosition = this.gameObject.transform.position;
+        maxHealth = health;
         if (health == 0)
         {
             Debug.Log("Set health object health to be greater than 0");
@@ -32,18 +35,18 @@ public class Health : MonoBehaviour {
 		{
 			killDerik();
 		}
-
-        if (health == 0)
+        else if (health == 0)
         {
+            // zombie? ragdoll?
             Destroy(gameObject);
         }
 	}
 
     public void modifyHealth(float points)
     {
-		if (health + points > 100.0f)
+		if (health + points > maxHealth)
 		{
-			health = 100.0f;
+			health = maxHealth;
 		}
 		else if (health + points < 0.0f)
 		{

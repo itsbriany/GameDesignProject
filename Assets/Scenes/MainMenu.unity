@@ -265,7 +265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755431442}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadLevel
         m_Mode: 3
         m_Arguments:
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755431442}
+      - m_Target: {fileID: 0}
         m_MethodName: ModifySFXVolume
         m_Mode: 0
         m_Arguments:
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755431442}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadLevel
         m_Mode: 3
         m_Arguments:
@@ -1508,8 +1508,8 @@ GameObject:
   - 114: {fileID: 755431437}
   - 222: {fileID: 755431441}
   - 114: {fileID: 755431440}
-  - 114: {fileID: 755431442}
   - 82: {fileID: 755431443}
+  - 114: {fileID: 755431442}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 755431436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76ad784fd5dd7432d868eb422b73bfe7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6995866f9e90b498ca6dd6fcd3376799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level2: {fileID: 1321867369}
@@ -2419,7 +2419,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755431442}
+      - m_Target: {fileID: 0}
         m_MethodName: LoadLevel
         m_Mode: 3
         m_Arguments:
@@ -2544,7 +2544,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755431442}
+      - m_Target: {fileID: 0}
         m_MethodName: ModifyBrightness
         m_Mode: 0
         m_Arguments:
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 755431442}
+      - m_Target: {fileID: 0}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
