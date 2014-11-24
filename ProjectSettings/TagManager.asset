@@ -10,11 +10,9 @@ TagManager:
   - Climb
   - 
   - StreetPlane
-<<<<<<< HEAD
   - InteriorWall
-=======
-  - Zombie
->>>>>>> origin/master
+  - LargeBox
+  - SmallBox
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
