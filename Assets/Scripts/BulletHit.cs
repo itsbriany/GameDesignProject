@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class BulletHit : MonoBehaviour {
+    public int damage = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -11,9 +12,9 @@ public class BulletHit : MonoBehaviour {
     void bulletHit(string type)
     {
         // different damage for different bullet types?
-        if (type == "type")
+        if (type == "gun")
         {
-            gameObject.SendMessage("modifyHealth", 1);
+            gameObject.SendMessage("modifyHealth", -damage);
         }
     }
 }

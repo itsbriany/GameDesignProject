@@ -36,9 +36,6 @@ public class ZombieAggro : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        currentStateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        zombieRun();
-        /*
         if (aggro)
         {
             aggroMovement();
@@ -46,20 +43,16 @@ public class ZombieAggro : MonoBehaviour {
         else
         {
             normalMovement();
-        }*/
+        }
 	}
 
     void normalMovement()
     {
-        // loop normal zombie stagger animation?
-
-        //Walk
-        anim.SetBool("Walk", true);
+        anim.SetBool("Idle", true);
     }
 
     void aggroMovement()
     {
-        Debug.Log("Zombie aggro movement");
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
         Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
@@ -68,6 +61,7 @@ public class ZombieAggro : MonoBehaviour {
         if (distance > attackDistance)
         {   
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            anim.SetBool("Walk", true);
         }
         else
         {
@@ -80,7 +74,7 @@ public class ZombieAggro : MonoBehaviour {
     {
         attackSource.Play();
         int attackType = Random.Range(1, 3);
-        Debug.Log("Attack type: " + attackType);
+
         if (attackType == 1)
         {
             anim.SetBool("Attack1", true);
