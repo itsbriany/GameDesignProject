@@ -19,8 +19,8 @@ public class DerikControls : MonoBehaviour {
     public float climbRaycastDistanceForward = 0; //Distance between the character and the wall to be climbed
 	public float energyDecreaseRate = -0.2f;
 	public float energyIncreaseRate = 0.5f;
-    public Animator anim;
 
+    private Animator anim;
 	private Energy nrg;
     private AnimatorStateInfo currentBaseState;
     private CapsuleCollider col;
@@ -43,7 +43,6 @@ public class DerikControls : MonoBehaviour {
     //aim mode vars
     private Transform aimobject;
     private SmoothFollow camscript;
-   // private Gun gun;
     
     public Texture2D aimCursor;
 	
@@ -61,11 +60,10 @@ public class DerikControls : MonoBehaviour {
         // aim mode vars init
         aimobject = transform.FindChild("aimobject");
         camscript = Camera.main.GetComponent<SmoothFollow>();
-        //gun = transform.GetComponent<Gun>();
 
         if (!aimCursor)
         {
-            //Debug.Log("Need aim cursor texture to change to on aimMode");
+            Debug.Log("Need aim cursor texture to change to on aimMode");
             //this.enabled = false;
         }
 	}
@@ -87,7 +85,6 @@ public class DerikControls : MonoBehaviour {
                     Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
                 }
             }
-           // gun.enabled = false;
             normalMode();
         }
 	}
@@ -171,7 +168,6 @@ public class DerikControls : MonoBehaviour {
     }
 
     void aimMode(){
-       // gun.enabled = true;
         camscript.target = aimobject;
         camscript.distance = 3.3f;
         camscript.height = 1.0f;
@@ -238,7 +234,11 @@ public class DerikControls : MonoBehaviour {
         if(currentBaseState.nameHash == jumpOffState){ 
             rigidbody.velocity = rigidbody.velocity;
             anim.applyRootMotion = false;
+<<<<<<< HEAD
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpForward, 0);    
+=======
             rigidbody.velocity = new Vector3(rigidbody.velocity.x * 1.1f, jumpForward, 0);      
+>>>>>>> BrianZomIK
         }
     }
 
@@ -292,10 +292,10 @@ public class DerikControls : MonoBehaviour {
     /*Makes the character climb up the high obstacle*/
     void climbHigh(){
         Ray climbRayUp = new Ray(ClimbUpRaycast.position, ClimbUpRaycast.up);
-       // Debug.DrawRay(ClimbUpRaycast.position, ClimbUpRaycast.up);
+        Debug.DrawRay(ClimbUpRaycast.position, ClimbUpRaycast.up);
         RaycastHit upHitInfo = new RaycastHit();
         Ray climbRayForward = new Ray(rigidbody.position + Vector3.up, rigidbody.transform.forward);
-        //Debug.DrawRay(rigidbody.position + Vector3.up, rigidbody.transform.forward);
+        Debug.DrawRay(rigidbody.position + Vector3.up, rigidbody.transform.forward);
         RaycastHit forwardHitInfo = new RaycastHit();
         if(Physics.Raycast(climbRayUp, out upHitInfo)){ //Shoot the upwards raycast
             Transform climbTrigger = upHitInfo.transform;
@@ -304,20 +304,35 @@ public class DerikControls : MonoBehaviour {
                 if(Physics.Raycast(climbRayForward, out forwardHitInfo)){ //Shoot the forward raycast
                     Transform wallTrigger = forwardHitInfo.transform;
                     if(wallTrigger != null){ //Check if there is a wall in front of the character
+<<<<<<< HEAD
+                        //Debug.Log("Wall detected!");
+                        if(upHitInfo.distance <= climbRaycastDistanceUp){ //Check if the trigger is low enough for the character to climb up
+                            //Debug.Log("ClimbTrigger reached!");
+                            if(forwardHitInfo.distance <= climbRaycastDistanceForward){  //Check if the forwards raycast hits the wall
+                                //Debug.Log("Wall reached!");                                 
+=======
                        // Debug.Log("Wall detected!");
                         if(upHitInfo.distance <= climbRaycastDistanceUp){ //Check if the trigger is low enough for the character to climb up
                            // Debug.Log("ClimbTrigger reached!");
                             if(forwardHitInfo.distance <= climbRaycastDistanceForward){  //Check if the forwards raycast hits the wall
                               //  Debug.Log("Wall reached!");                                 
+>>>>>>> BrianZomIK
                                 anim.SetBool("Climb", true);
                                 if(currentBaseState.nameHash == climbHighState){
                                     anim.applyRootMotion = false;
                                     rigidbody.useGravity = false;
                                     float footPositionY = transform.FindChild("Feet").position.y;
+<<<<<<< HEAD
+                                    //Debug.Log("Obstacle Height: " + forwardHitInfo.transform.localScale.y);
+                                    //Debug.Log("Feet position y-cooridnate: " + transform.FindChild("Feet").position.y);
+                                    transform.position = new Vector3(transform.position.x, Mathf.Lerp(footPositionY, forwardHitInfo.transform.localScale.y + footPositionY + 10, Time.deltaTime), transform.position.z);
+                                    //Debug.Log("Root motion disabled!");
+=======
                                    // Debug.Log("Obstacle Height: " + forwardHitInfo.transform.localScale.y);
                                    // Debug.Log("Feet position y-cooridnate: " + transform.FindChild("Feet").position.y);
                                     transform.position = new Vector3(transform.position.x, Mathf.Lerp(footPositionY, forwardHitInfo.transform.localScale.y + footPositionY + 10, Time.deltaTime), transform.position.z);
                                    // Debug.Log("Root motion disabled!");
+>>>>>>> BrianZomIK
                                     
                                 }
                             }

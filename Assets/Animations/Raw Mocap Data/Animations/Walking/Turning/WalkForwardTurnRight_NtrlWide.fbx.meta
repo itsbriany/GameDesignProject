@@ -160,6 +160,7 @@ ModelImporter:
     7400000: WalkForwardTurnRight_NtrlWide
     7400002: WalkForwardTurnRight
     7400004: WalkForward
+    7400006: WalkForwardTurnLeft
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -196,10 +197,106 @@ ModelImporter:
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 1
-      mirror: 0
+      mirror: 1
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .0508905873
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .122137405
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .188295156
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .266261756
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .341984212
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .416985929
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .496314675
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .568430424
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .644874275
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .721318364
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .797041237
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .879975796
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
@@ -225,7 +322,167 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .0514285229
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .103809439
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .149523675
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .199047446
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .24285692
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .296190619
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .342858344
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .391430885
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .443813056
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .495242804
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .548577368
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .595245063
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .647627234
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .691437781
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .749534309
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .793344855
+        functionName: playFootstepst
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .842869818
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .890489936
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .940014899
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .993349433
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -406,6 +663,346 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Reference
+        weight: 1
+      - path: Reference/Hips
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Reference/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToes
+        weight: 1
+      - path: Reference/Hips/RightUpLeg
+        weight: 1
+      - path: Reference/Hips/RightUpLeg/RightLeg
+        weight: 1
+      - path: Reference/Hips/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Reference/Hips/RightUpLeg/RightLeg/RightFoot/RightToes
+        weight: 1
+      - path: Reference/Hips/Spine
+        weight: 1
+      - path: Reference/Hips/Spine/Chest
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandIndex1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandIndex1/LeftHandIndex2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandPinky1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandPinky1/LeftHandPinky2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandRing1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandRing1/LeftHandRing2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandRing1/LeftHandRing2/LeftHandRing3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/JawEND
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/LeftLipCorner
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/LeftLipLower
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/RightLipCorner
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/RightLipLower
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/TongueBack
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/Jaw/TongueTip
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftCheek
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftEye
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftEyelidLower
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftEyelidUpper
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftInnerBrow
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftIOuterBrow
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftLipUpper
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/LeftNostril
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightCheek
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightEye
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightEyelidLower
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightEyelidUpper
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightInnerBrow
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightIOuterBrow
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightLipUpper
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/Neck/Head/RightNostril
+        weight: 0
+      - path: Reference/Hips/Spine/Chest/RightShoulder
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandIndex1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandIndex1/RightHandIndex2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandIndex1/RightHandIndex2/RightHandIndex3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandPinky1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandPinky1/RightHandPinky2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandPinky1/RightHandPinky2/RightHandPinky3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandRing1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandRing1/RightHandRing2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandRing1/RightHandRing2/RightHandRing3
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: Reference/Hips/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: WalkForwardTurnLeft
+      takeName: _6_a_U1_M_P_WalkForwardTurnRight_NtrlWide__Fb_Dia1m_No_0_PJ_1
+      firstFrame: 34
+      lastFrame: 349
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: .0448463075
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .144846231
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .243893757
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .345800042
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .444849908
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .541994929
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .643902004
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .749618709
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .848668575
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .949623287
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .0976750851
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .195770234
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .296722949
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .391010821
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .494822711
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .590062976
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .689112782
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .788162708
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .88911736
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .993881702
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

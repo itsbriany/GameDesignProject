@@ -93,13 +93,13 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400002, guid: bcc128c6884eb82488a1047352ee051b, type: 3}
+  - m_Motion: {fileID: 7400004, guid: bcc128c6884eb82488a1047352ee051b, type: 3}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
-    m_CycleOffset: .5
+    m_CycleOffset: 0
     m_IsAnim: 1
-    m_Mirror: 1
+    m_Mirror: 0
   - m_Motion: {fileID: 7400000, guid: cd3dc152a8698d94890a6312ab347ba1, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
@@ -160,13 +160,13 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400002, guid: 433e4613bf427a440b56263042615014, type: 3}
+  - m_Motion: {fileID: 7400006, guid: 433e4613bf427a440b56263042615014, type: 3}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
-    m_CycleOffset: .5
+    m_CycleOffset: 0
     m_IsAnim: 1
-    m_Mirror: 1
+    m_Mirror: 0
   - m_Motion: {fileID: 7400000, guid: c31c80009cccec043ac9ec4439552a4d, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
@@ -248,13 +248,13 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400002, guid: 572f65afed658844bb2d4376d95395ba, type: 3}
+  - m_Motion: {fileID: 7400004, guid: 572f65afed658844bb2d4376d95395ba, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
-    m_CycleOffset: .5
+    m_CycleOffset: 0
     m_IsAnim: 1
-    m_Mirror: 1
+    m_Mirror: 0
   m_BlendParameter: Direction
   m_BlendParameterY: Speed
   m_MinThreshold: -1

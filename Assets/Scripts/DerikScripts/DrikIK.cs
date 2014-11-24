@@ -12,7 +12,7 @@ public class DrikIK : MonoBehaviour {
     public Transform rightHandObj = null;
 
     public GameObject ikObject;
-    
+    /*
     void Start () 
     {
         animator = rigidbody.GetComponent<Animator>();
@@ -20,6 +20,7 @@ public class DrikIK : MonoBehaviour {
     }
     
     //a callback for calculating IK
+    /*
     void OnAnimatorIK()
     {
         Debug.Log("OnAnimatoriK!");
@@ -46,5 +47,5 @@ public class DrikIK : MonoBehaviour {
                 animator.SetIKRotationWeight(AvatarIKGoal.RightHand,0);             
             }
         }
-    }    
+    }   */ 
 }
