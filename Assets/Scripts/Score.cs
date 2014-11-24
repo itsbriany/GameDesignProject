@@ -8,11 +8,16 @@ using System.Collections;
 	 */
 
 public class Score : MonoBehaviour {
-    int score = 0;
+    public int userScore = 0;
+	public int zombiesKilled = 0;
+	public float clearTime = 0.0f;
+	public bool displayScore = true;
 
 	// Use this for initialization
 	void Start () {
-		score = 0;
+		DontDestroyOnLoad(this.gameObject);
+		this.gameObject.tag = "WontBeDestroyed";
+		userScore = 0;
 	}
 	
 	// Update is called once per frame
@@ -20,18 +25,31 @@ public class Score : MonoBehaviour {
 	}
 
 	void OnGUI () {
-		GUI.Box(new Rect(Screen.width - Screen.width/8, Screen.height/25, Screen.width/10, Screen.height/20), "Score: " + score);
+		if (displayScore)
+		{
+			GUI.Box(new Rect(Screen.width - Screen.width/8, Screen.height/25, Screen.width/10, Screen.height/20), "Score: " + userScore);
+		}
 	}
 
 	public void addPoints(int points)
 	{
-		if (score + points < 0)
+		if (userScore + points < 0)
 		{
-			score = 0;
+			userScore = 0;
 		}
 		else
 		{
-			score += points;
+			userScore += points;
 		}
+	}
+
+	public void addZombieKill()
+	{
+		zombiesKilled += 1;
+	}
+
+	public void setClearTime (float time)
+	{
+		clearTime = time;
 	}
 }
