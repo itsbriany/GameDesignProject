@@ -48,7 +48,8 @@ public class ZombieAggro : MonoBehaviour {
 
     void normalMovement()
     {
-        anim.SetBool("Idle", true);
+        //anim.SetBool("Idle", true);
+		anim.SetBool ("Walk", false);
     }
 
     void aggroMovement()

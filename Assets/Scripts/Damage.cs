@@ -20,7 +20,6 @@ public class Damage : MonoBehaviour {
 	{
 		if (collision.gameObject.name == "Derik")
 		{
-            Debug.Log("JDKFJ");
 			Health playerHealth = collision.gameObject.GetComponent<Health>();
 			playerHealth.modifyHealth(-damageAmt);
 		}
