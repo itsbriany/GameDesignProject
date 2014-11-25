@@ -159,7 +159,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .111480042
+        functionName: tyrantZombieWalk
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 44dd9883867eb1349ac143ba99d36667,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .573480725
+        functionName: tyrantZombieWalk
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 44dd9883867eb1349ac143ba99d36667,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}
@@ -185,7 +201,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .10325072
+        functionName: tyrantZombieStomp
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 44dd9883867eb1349ac143ba99d36667,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .533339858
+        functionName: tyrantZombieStomp
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 44dd9883867eb1349ac143ba99d36667,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}

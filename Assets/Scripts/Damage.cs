@@ -22,6 +22,7 @@ public class Damage : MonoBehaviour {
 		{
 			Health playerHealth = collision.gameObject.GetComponent<Health>();
 			playerHealth.modifyHealth(-damageAmt);
+            
 		}
 	}
 }

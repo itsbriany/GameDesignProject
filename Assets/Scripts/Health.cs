@@ -11,6 +11,8 @@ public class Health : MonoBehaviour {
 	public Score scoresystem;
 
     private float maxHealth;
+    private GameObject derik;
+    private Sounds derikSounds;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +22,15 @@ public class Health : MonoBehaviour {
         {
             Debug.Log("Set health object health to be greater than 0");
             this.enabled = false;
+        }
+        derik = GameObject.Find("Derik");
+        if (derik)
+        {
+            derikSounds = derik.GetComponent<Sounds>();
+        }
+        else
+        { 
+            Debug.Log("Cannot find Derik");
         }
 	}
 	
@@ -65,6 +76,10 @@ public class Health : MonoBehaviour {
 	void killDerik()
 	{
 		// play music
+        if (derikSounds)
+        {
+            derikSounds.dyingSound();
+        }
 		// remove points
 		// move Derik back to respawn position and add health back
 		this.gameObject.transform.position = spawnPosition;

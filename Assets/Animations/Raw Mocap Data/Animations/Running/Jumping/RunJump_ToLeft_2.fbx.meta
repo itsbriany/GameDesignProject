@@ -291,7 +291,47 @@ ModelImporter:
             tangentMode: 0
           preInfinity: 2
           postInfinity: 2
-      events: []
+      events:
+      - time: .117956325
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .190412074
+        functionName: jumpWhooshSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .583756685
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .836143315
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .996668935
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

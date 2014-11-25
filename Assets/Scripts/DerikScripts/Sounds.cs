@@ -11,37 +11,64 @@ public class Sounds : MonoBehaviour {
 
     public AudioClip footsteps1;
     public AudioClip footsteps2;
+    public AudioClip damagedSoundEffect;
+    public AudioClip shootingSoundEffect;
+    public AudioClip screamingSoundEffect;
+    public AudioClip jumpWhooshSoundEffect;
 
     private bool footstepFlag;
 
 	// Use this for initialization
 	void Start () {
-	    //anim = gameObject.GetComponent<Animator>();
-        Debug.Log("The gameObject: " + gameObject);
         DerikControls derikControls = gameObject.GetComponent<DerikControls>();
-        Debug.Log("Animator from Sounds.cs: " + derikControls.anim);
         footstepFlag = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    //playFootsteps();
 	}
 
     /*Plays the footsteps sound*/
-    void playFootsteps() {
-        if (!audio.isPlaying) {
+    public void playFootsteps() {
+        //if (!audio.isPlaying)
+        //{
             if (footstepFlag)
             {
-                audio.PlayOneShot(footsteps1, 0.3f);
+                audio.PlayOneShot(footsteps1);
                 footstepFlag = false;
-            } 
-            else 
+            }
+            else
             {
-                audio.PlayOneShot(footsteps2, 0.7f);
+                audio.PlayOneShot(footsteps2);
                 footstepFlag = true;
             }
-                
-        }
+       // }      
+    }
+
+    /*Derik is damaged!*/
+    public void damagedSound() {
+        //if (!audio.isPlaying) 
+        //{
+            audio.PlayOneShot(damagedSoundEffect, 1.0f);
+        //}
+    }
+
+    /*Derik is shooting*/
+    public void shootingSound() {
+        //if (!audio.isPlaying)
+       // {
+            audio.PlayOneShot(shootingSoundEffect, 1.0f);
+       // }
+    }
+
+    /*Derik Screaming in pain*/
+    public void dyingSound() {
+       // if (!audio.isPlaying)
+       // {
+            audio.PlayOneShot(screamingSoundEffect, 1.0f);
+       // }
+    }
+
+    public void jumpWhooshSound() { 
+       // if (!audio.isPlaying)
+       // {
+            audio.PlayOneShot(jumpWhooshSoundEffect);
+        //}
     }
 }
