@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 
 public class ButtonFunctions : MonoBehaviour {
@@ -20,19 +20,19 @@ public class ButtonFunctions : MonoBehaviour {
 	void Update () {
 		if (currentLevel == 1)
 		{
-			level2.GetComponent<Button>().interactable = false;
-			level3.GetComponent<Button>().interactable = false;
+	//		level2.GetComponent<Button>().interactable = false;
+		//	level3.GetComponent<Button>().interactable = false;
 
 		}
 		else if (currentLevel == 2)
 		{
-			level2.GetComponent<Button>().interactable = true;
-			level3.GetComponent<Button>().interactable = false;
+			//level2.GetComponent<Button>().interactable = true;
+			//level3.GetComponent<Button>().interactable = false;
 		}
 		else
 		{
-			level2.GetComponent<Button>().interactable = true;
-			level3.GetComponent<Button>().interactable = true;
+			//level2.GetComponent<Button>().interactable = true;
+			//level3.GetComponent<Button>().interactable = true;
 		}
 	}
 
