@@ -1287,10 +1287,11 @@ MonoBehaviour:
   JumpOffRaycastDistance: 3
   jumpForward: .230000004
   rollTolerance: 5
-  climbRaycastDistanceUp: 4
+  climbRaycastDistanceUp: 2
   climbRaycastDistanceForward: .5
   energyDecreaseRate: -.200000003
   energyIncreaseRate: .5
+  anim: {fileID: 0}
   aimCursor: {fileID: 2800000, guid: bf888383ffe857b4ba159f44c9ad6371, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -1332,6 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa7f12608f48da4f9805799524094e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreSystem: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

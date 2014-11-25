@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Gun : MonoBehaviour {
     GameObject crossHair;
+	public Score scoreSystem;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,8 @@ public class Gun : MonoBehaviour {
                 if (hit.collider.gameObject.tag == "Zombie")
                 {   
                     hit.collider.SendMessage("bulletHit", "gun");
+					scoreSystem.addPoints(100);
+					scoreSystem.addZombieKill();
                 }
             }
         }
