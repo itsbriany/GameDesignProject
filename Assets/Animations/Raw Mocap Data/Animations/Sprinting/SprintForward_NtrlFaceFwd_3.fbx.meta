@@ -201,7 +201,47 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .128466055
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .251419723
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .354700804
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .487490773
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: .639953315
+        functionName: playFootsteps
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}

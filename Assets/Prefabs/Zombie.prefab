@@ -214,6 +214,7 @@ GameObject:
   - 135: {fileID: 13500000}
   - 82: {fileID: 8200002}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -1558,7 +1559,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .652259111, y: 4.05929191e-17, z: 707.177063}
+  m_LocalPosition: {x: -14.1976604, y: .225894928, z: 691.253662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400120}
@@ -2593,7 +2594,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -2786,6 +2787,22 @@ MonoBehaviour:
   scoreAmt: 0
   hud: {fileID: 0}
   scoresystem: {fileID: 0}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40399f8f0de56604180349d6caabc78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieAttack1Sound: {fileID: 8300000, guid: 2329434e5f48208408764690e20270f5, type: 3}
+  zombieAttack2Sound: {fileID: 8300000, guid: 250f72075e1dd5e46afe42d72e266f78, type: 3}
+  zombieAttack3Sound: {fileID: 8300000, guid: b10cc5e4b4ff98248895cb8b176bf19a, type: 3}
+  curiousZombieSound: {fileID: 0}
+  zombieChaseSound: {fileID: 8300000, guid: 277ecb714cdc0854aba187a1dcd07084, type: 3}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

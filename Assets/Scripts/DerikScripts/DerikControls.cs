@@ -65,7 +65,7 @@ public class DerikControls : MonoBehaviour {
 
         if (!aimCursor)
         {
-            //Debug.Log("Need aim cursor texture to change to on aimMode");
+            Debug.Log("Need aim cursor texture to change to on aimMode");
             //this.enabled = false;
         }
 	}

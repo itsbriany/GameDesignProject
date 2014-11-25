@@ -5,11 +5,23 @@ public class Gun : MonoBehaviour {
     GameObject crossHair;
 	public Score scoreSystem;
 
+    private GameObject derik;
+    private Sounds derikSounds;
+
 	// Use this for initialization
 	void Start () {
         if (!Camera.main)
         {
             Debug.Log("Gun object needs main camera");
+        }
+        derik = GameObject.Find("Derik");
+        if (derik)
+        {
+            derikSounds = derik.GetComponent<Sounds>();
+        }
+        else
+        {
+            Debug.Log("Gun object cannot find Derik");
         }
 	}
 	
@@ -17,6 +29,11 @@ public class Gun : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
+            if (derikSounds) 
+            {
+                derikSounds.shootingSound();
+            }
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
