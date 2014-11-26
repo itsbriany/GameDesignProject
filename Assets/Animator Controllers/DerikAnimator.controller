@@ -93,13 +93,13 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400004, guid: bcc128c6884eb82488a1047352ee051b, type: 3}
+  - m_Motion: {fileID: 7400002, guid: bcc128c6884eb82488a1047352ee051b, type: 3}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
-    m_CycleOffset: 0
+    m_CycleOffset: .5
     m_IsAnim: 1
-    m_Mirror: 0
+    m_Mirror: 1
   - m_Motion: {fileID: 7400000, guid: cd3dc152a8698d94890a6312ab347ba1, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
@@ -194,13 +194,13 @@ BlendTree:
   m_PrefabInternal: {fileID: 0}
   m_Name: Blend Tree
   m_Childs:
-  - m_Motion: {fileID: 7400002, guid: 07d98426956a8624d9130606bcb186b8, type: 3}
+  - m_Motion: {fileID: 7400000, guid: 07d98426956a8624d9130606bcb186b8, type: 3}
     m_Threshold: -1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
-    m_CycleOffset: 0
+    m_CycleOffset: .5
     m_IsAnim: 1
-    m_Mirror: 0
+    m_Mirror: 1
   - m_Motion: {fileID: 7400000, guid: 07d98426956a8624d9130606bcb186b8, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
@@ -248,13 +248,13 @@ BlendTree:
     m_CycleOffset: 0
     m_IsAnim: 1
     m_Mirror: 0
-  - m_Motion: {fileID: 7400004, guid: 572f65afed658844bb2d4376d95395ba, type: 3}
+  - m_Motion: {fileID: 7400002, guid: 572f65afed658844bb2d4376d95395ba, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
-    m_CycleOffset: 0
+    m_CycleOffset: .5
     m_IsAnim: 1
-    m_Mirror: 0
+    m_Mirror: 1
   m_BlendParameter: Direction
   m_BlendParameterY: Speed
   m_MinThreshold: -1
@@ -427,6 +427,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110108705
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110268214}
+  m_DstState: {fileID: 110250718}
+  m_TransitionDuration: .119047597
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .880952418
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110109296
 Transition:
   serializedVersion: 2
@@ -595,26 +615,6 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110126854
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110220369}
-  m_DstState: {fileID: 110250718}
-  m_TransitionDuration: .25
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: Falling
-    m_EventTreshold: 0
-    m_ExitTime: .75
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
 --- !u!1101 &110129776
 Transition:
   serializedVersion: 2
@@ -743,6 +743,26 @@ Transition:
     m_ConditionEvent: Climb
     m_EventTreshold: 0
     m_ExitTime: .81249994
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110151630
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110220369}
+  m_DstState: {fileID: 110217126}
+  m_TransitionDuration: .159574464
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .840425551
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -911,26 +931,6 @@ Transition:
     m_ConditionEvent: 
     m_EventTreshold: 0
     m_ExitTime: .96875
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
-  m_CanTransitionToSelf: 0
---- !u!1101 &110176845
-Transition:
-  serializedVersion: 2
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110268214}
-  m_DstState: {fileID: 110250718}
-  m_TransitionDuration: .119047597
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 5
-    m_ConditionEvent: Vault
-    m_EventTreshold: 0
-    m_ExitTime: .880952418
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -1371,11 +1371,11 @@ StateMachine:
     data:
       first: {fileID: 110268214}
       second:
-      - {fileID: 110176845}
+      - {fileID: 110108705}
     data:
       first: {fileID: 110220369}
       second:
-      - {fileID: 110126854}
+      - {fileID: 110151630}
     data:
       first: {fileID: 110232316}
       second:

@@ -53,17 +53,11 @@ public class TyrantZombieSounds : MonoBehaviour {
 
     /*The tyrant zombie stomped (running footstep sound)*/
     public void tyrantStomp() {
-        //if (!audio.isPlaying)
-       // {
-            audio.PlayOneShot(tyrantZombieFootstepSound, 1.0f);
-        //}
+       audio.PlayOneShot(tyrantZombieFootstepSound, 1.0f);
     }
 
     /*The tyrant zombie is walking (Walking footstep sound)*/
     public void tyrantWalk() {
-        //if (!audio.isPlaying)
-        //{
-            audio.PlayOneShot(tyrantZombieWalkSound, 0.5f);
-       // }
+       audio.PlayOneShot(tyrantZombieWalkSound, 0.5f);
     }
 }

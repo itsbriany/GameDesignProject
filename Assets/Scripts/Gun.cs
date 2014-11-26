@@ -29,10 +29,6 @@ public class Gun : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (derikSounds) 
-            {
-                derikSounds.shootingSound();
-            }
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

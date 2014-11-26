@@ -225,127 +225,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: .0771783516
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .140337691
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .195602104
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .271919638
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .324552417
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .395606667
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .469292581
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .532451928
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .614032686
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .658770561
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .73508811
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .803510725
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .871933103
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .935092449
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .0175621621
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1
@@ -526,14 +406,6 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: .018887518
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       - time: .0715202987
         functionName: playFootsteps
         data: 
@@ -543,14 +415,6 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: .13731128
-        functionName: playFootsteps
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: .192575693
         functionName: playFootsteps
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,

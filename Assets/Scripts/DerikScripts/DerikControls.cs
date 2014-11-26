@@ -27,7 +27,7 @@ public class DerikControls : MonoBehaviour {
     private Transform JumpOffRaycast; 
     private Transform ClimbUpRaycast;
     private bool isGrounded;
-    //private Dictionary<int, int> stateDictionary = new Dictionary<int,int>(); //Hash map for animation states
+    private Sounds derikSounds;
 
     static int basicJumpState = Animator.StringToHash("Base Layer.DefaultJump");	
     static int vaultState = Animator.StringToHash("Base Layer.Vault");
@@ -39,6 +39,7 @@ public class DerikControls : MonoBehaviour {
     static int jumpOffState = Animator.StringToHash("Base Layer.JumpOff");
     static int fallingState = Animator.StringToHash("Base Layer.Falling");
     static int climbHighState = Animator.StringToHash("Base Layer.ClimbHigh");
+    static int idleTurningState = Animator.StringToHash("Base Layer.TurnAround");
 
     //aim mode vars
     private Transform aimobject;
@@ -62,6 +63,7 @@ public class DerikControls : MonoBehaviour {
         aimobject = transform.FindChild("aimobject");
         camscript = Camera.main.GetComponent<SmoothFollow>();
         //gun = transform.GetComponent<Gun>();
+        derikSounds = gameObject.GetComponent<Sounds>();
 
         if (!aimCursor)
         {
@@ -74,6 +76,12 @@ public class DerikControls : MonoBehaviour {
 	void FixedUpdate () {
         if(Input.GetKey(KeyCode.Z)){
             aimMode();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (derikSounds) 
+                    derikSounds.shootingSound();
+            
+            }
         }
         else{
             if (camscript) 
@@ -98,7 +106,6 @@ public class DerikControls : MonoBehaviour {
 		anim.SetFloat("Speed", v);							// set our animator's float parameter 'Speed' equal to the vertical input axis				
 		anim.SetFloat("Direction", h);
         currentBaseState = anim.GetCurrentAnimatorStateInfo(0); //returns the current animation state at layer 0
-        //Debug.Log("Velocity: " + rigidbody.velocity);
 		if(Input.GetKey(KeyCode.LeftShift) && (nrg.getEnergy() > 0)){
 			anim.SetBool("Run", true);
 			nrg.modifyEnergy(energyDecreaseRate);
@@ -167,7 +174,7 @@ public class DerikControls : MonoBehaviour {
         roll();
         climbHigh();
         grounded();
-
+        turnAround();
     }
 
     void aimMode(){
@@ -333,6 +340,15 @@ public class DerikControls : MonoBehaviour {
         anim.SetBool("Climb", false);
         anim.applyRootMotion = true;
         rigidbody.useGravity = true;
+    }
+
+    /*Turn derik around faster*/
+    void turnAround() {
+        if (currentBaseState.nameHash == idleTurningState)
+        {
+            anim.speed *= 2.0f;
+        }
+        
     }
 
 }
