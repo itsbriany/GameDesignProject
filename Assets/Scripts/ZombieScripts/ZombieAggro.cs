@@ -60,7 +60,6 @@ public class ZombieAggro : MonoBehaviour {
 
     void normalMovement()
     {
-        //anim.SetBool("Idle", true);
 		anim.SetBool ("Walk", false);
     }
 
@@ -98,7 +97,7 @@ public class ZombieAggro : MonoBehaviour {
     {
       
         int attackType = Random.Range(1, 3);
-        Debug.Log(attackType);
+
         if (attackType == 1 && currentStateInfo.nameHash != attack1State && currentStateInfo.nameHash != attack2State)
         {
             if (currentStateInfo.nameHash == attack1State)

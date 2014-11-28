@@ -6,8 +6,12 @@ public class Health : MonoBehaviour {
     public bool isPlayer = false;
 	public int scoreAmt = -200;
 
+    public Transform zombieRagdoll;
+
 	public PlayerHUD hud;
 	public Score scoresystem;
+
+	private Vector3 spawnPosition;
 
     private float maxHealth;
     private GameObject derik;
@@ -49,8 +53,17 @@ public class Health : MonoBehaviour {
 		}
         else if (health == 0)
         {
-            // zombie? ragdoll?
-            Destroy(gameObject);
+            if(zombieRagdoll){
+                Vector3 force = -gameObject.rigidbody.velocity.normalized * 100;
+                Transform rag = Instantiate(zombieRagdoll, transform.position, transform.rotation) as Transform;
+                Destroy(gameObject);
+                foreach(Rigidbody body in rag.GetComponentsInChildren<Rigidbody>()){
+                    body.velocity = force;
+                }
+            }
+            else{
+                Destroy(gameObject);
+            }
         }
 	}
 
