@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 
 public class ScoreScreen : MonoBehaviour {
 
@@ -42,10 +42,10 @@ public class ScoreScreen : MonoBehaviour {
 		int clearTimePenalty = (int)clearTime * -10;
 		int finalScoreSum = currentScore + zombieKillsBonus + clearTimePenalty;
 
-		//currentScoreField.GetComponent<Text>().text = "CURRENT SCORE: " + currentScore;
-		//zombieKillsField.GetComponent<Text>().text = "ZOMBIE KILLS: 200 * " + zombieKills + " = " + (200*zombieKills);
-		//clearTimeField.GetComponent<Text>().text = "CLEAR TIME: " + clearTimePenalty;
-		//finalScoreField.GetComponent<Text>().text = "FINAL SCORE: " + finalScoreSum;
+		currentScoreField.GetComponent<Text>().text = "CURRENT SCORE: " + currentScore;
+		zombieKillsField.GetComponent<Text>().text = "ZOMBIE KILLS: 200 * " + zombieKills + " = " + (200*zombieKills);
+		clearTimeField.GetComponent<Text>().text = "CLEAR TIME: " + clearTimePenalty;
+		finalScoreField.GetComponent<Text>().text = "FINAL SCORE: " + finalScoreSum;
 	}
 
 
