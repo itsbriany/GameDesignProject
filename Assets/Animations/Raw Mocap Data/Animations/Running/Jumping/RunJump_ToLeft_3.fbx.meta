@@ -256,6 +256,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: .389936298
+        functionName: jumpWhooshSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 0
       maskSource: {instanceID: 0}

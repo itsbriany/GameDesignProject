@@ -740,7 +740,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: .322250813
+        functionName: jumpWhooshSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 901bc015766e5024984cfc116172203f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

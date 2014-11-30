@@ -207,27 +207,6 @@ public class DerikControls : MonoBehaviour {
         rigidbody.AddForce(rigidbody.transform.up * vaultAccelerateForce, ForceMode.Impulse);
     }
 
-    //Pull the character down during animations
-    void pullDown(){
-        // Raycast down from the center of the character.. 
-        
-		Ray ray = new Ray(transform.position + Vector3.up, -Vector3.up);
-		RaycastHit hitInfo = new RaycastHit();
-		
-		if (Physics.Raycast(ray, out hitInfo))
-		{
-			// ..if distance to the ground is more than 1.75, use Match Target
-			if (hitInfo.distance > 1.75f)
-			{
-				
-				// MatchTarget allows us to take over animation and smoothly transition our character towards a location - the hit point from the ray.
-				// Here we're telling the Root of the character to only be influenced on the Y axis (MatchTargetWeightMask) and only occur between 0.35 and 0.5
-				// of the timeline of our animation clip
-				anim.MatchTarget(hitInfo.point, Quaternion.identity, AvatarTarget.Root, new MatchTargetWeightMask(new Vector3(0, 1, 0), 0), 0.35f, 0.5f);
-			}
-		}
-    }
-
     /*Checks if the character is jumping off something*/
     void jumpOff(){
         Ray ray = new Ray(JumpOffRaycast.position, -rigidbody.transform.up);

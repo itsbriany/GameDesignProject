@@ -7,9 +7,12 @@ public class Gun : MonoBehaviour {
 
     private GameObject derik;
     private Sounds derikSounds;
+    private GameObject muzzleFlash;
 
 	// Use this for initialization
 	void Start () {
+        muzzleFlash = transform.FindChild("Pistol").FindChild("MuzzleFlash").gameObject;
+        muzzleFlash.renderer.enabled = false;
         if (!Camera.main)
         {
             Debug.Log("Gun object needs main camera");
@@ -29,9 +32,10 @@ public class Gun : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
-
+            muzzleFlash.renderer.enabled = true;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
 
             if (Physics.Raycast(ray, out hit))
             {
@@ -42,6 +46,7 @@ public class Gun : MonoBehaviour {
 					scoreSystem.addZombieKill();
                 }
             }
-        }
+        }else
+        muzzleFlash.renderer.enabled = false;
 	}
 }
