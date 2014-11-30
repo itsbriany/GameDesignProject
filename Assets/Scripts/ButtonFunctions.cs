@@ -38,7 +38,7 @@ public class ButtonFunctions : MonoBehaviour {
 
 	public void PressedStartGame()
 	{
-		Application.LoadLevel("Chapter1");
+		Application.LoadLevel("Instructions");
 	}
 
 	public void LoadLevel(int levelNumber)
@@ -46,7 +46,7 @@ public class ButtonFunctions : MonoBehaviour {
 		switch (levelNumber)
 		{
 		case 1:
-			Application.LoadLevel("Chapter1");
+			Application.LoadLevel("Instructions");
 			break;
 		case 2:
 			// AND SO ON...
