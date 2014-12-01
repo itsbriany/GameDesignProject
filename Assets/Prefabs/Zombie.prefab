@@ -2785,7 +2785,7 @@ MonoBehaviour:
   health: 1
   isPlayer: 0
   scoreAmt: 0
-  zombieRagdoll: {fileID: 400172, guid: 9627d60c3b6ff7a4c886152f3724f1af, type: 2}
+  ragdoll: {fileID: 400172, guid: 9627d60c3b6ff7a4c886152f3724f1af, type: 2}
   hud: {fileID: 0}
   scoresystem: {fileID: 0}
 --- !u!114 &11400008
