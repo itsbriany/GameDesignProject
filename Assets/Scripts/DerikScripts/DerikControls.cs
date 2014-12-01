@@ -74,7 +74,7 @@ public class DerikControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if(Input.GetKey(KeyCode.Z)){
+        if(Input.GetKey(KeyCode.Z) && currentBaseState.nameHash == idleState && !anim.IsInTransition(0)){
             aimMode();
             if (Input.GetButtonDown("Fire1"))
             {
@@ -278,10 +278,10 @@ public class DerikControls : MonoBehaviour {
     /*Makes the character climb up the high obstacle*/
     void climbHigh(){
         Ray climbRayUp = new Ray(ClimbUpRaycast.position, ClimbUpRaycast.up);
-       // Debug.DrawRay(ClimbUpRaycast.position, ClimbUpRaycast.up);
+        Debug.DrawRay(ClimbUpRaycast.position, ClimbUpRaycast.up);
         RaycastHit upHitInfo = new RaycastHit();
         Ray climbRayForward = new Ray(rigidbody.position + Vector3.up, rigidbody.transform.forward);
-        //Debug.DrawRay(rigidbody.position + Vector3.up, rigidbody.transform.forward);
+        Debug.DrawRay(rigidbody.position + Vector3.up, rigidbody.transform.forward);
         RaycastHit forwardHitInfo = new RaycastHit();
         if(Physics.Raycast(climbRayUp, out upHitInfo)){ //Shoot the upwards raycast
             Transform climbTrigger = upHitInfo.transform;
@@ -290,18 +290,18 @@ public class DerikControls : MonoBehaviour {
                 if(Physics.Raycast(climbRayForward, out forwardHitInfo)){ //Shoot the forward raycast
                     Transform wallTrigger = forwardHitInfo.transform;
                     if(wallTrigger != null){ //Check if there is a wall in front of the character
-                       // Debug.Log("Wall detected!");
+                       //Debug.Log("Wall detected!");
                         if(upHitInfo.distance <= climbRaycastDistanceUp){ //Check if the trigger is low enough for the character to climb up
-                           // Debug.Log("ClimbTrigger reached!");
+                           //Debug.Log("ClimbTrigger reached!");
                             if(forwardHitInfo.distance <= climbRaycastDistanceForward){  //Check if the forwards raycast hits the wall
-                              //  Debug.Log("Wall reached!");                                 
+                              //Debug.Log("Wall reached!");                                 
                                 anim.SetBool("Climb", true);
                                 if(currentBaseState.nameHash == climbHighState){
                                     anim.applyRootMotion = false;
                                     rigidbody.useGravity = false;
                                     float footPositionY = transform.FindChild("Feet").position.y;
-                                   // Debug.Log("Obstacle Height: " + forwardHitInfo.transform.localScale.y);
-                                   // Debug.Log("Feet position y-cooridnate: " + transform.FindChild("Feet").position.y);
+                                   //Debug.Log("Obstacle Height: " + forwardHitInfo.transform.localScale.y);
+                                  // Debug.Log("Feet position y-cooridnate: " + transform.FindChild("Feet").position.y);
                                     transform.position = new Vector3(transform.position.x, Mathf.Lerp(footPositionY, forwardHitInfo.transform.localScale.y + footPositionY + 10, Time.deltaTime), transform.position.z);
                                    // Debug.Log("Root motion disabled!");
                                     

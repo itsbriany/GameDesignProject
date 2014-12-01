@@ -40,14 +40,14 @@ public class DerikIK : MonoBehaviour {
     void OnAnimatorIK()
     {
         currentBaseState = animator.GetCurrentAnimatorStateInfo(0);
-        Debug.Log("OnAnimatorIK working!");
+        //Debug.Log("OnAnimatorIK working!");
         if (animator)
         {
-            Debug.Log("Animator is true!");
+            //Debug.Log("Animator is true!");
             //if the IK is active, set the position and rotation directly to the goal. 
             if (ikActive)
             {
-                Debug.Log("IK active!");
+                //Debug.Log("IK active!");
                 //weight = 1.0 for the right hand means position and rotation will be at the IK goal (the place the character wants to grab)
                 animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1.0f);
                 animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1.0f);
