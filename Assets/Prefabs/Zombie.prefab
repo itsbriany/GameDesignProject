@@ -2782,7 +2782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1dfccc874bec64ea8d5634f1bb77ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 5
   isPlayer: 0
   scoreAmt: 0
   ragdoll: {fileID: 400172, guid: 9627d60c3b6ff7a4c886152f3724f1af, type: 2}
