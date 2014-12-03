@@ -128,7 +128,7 @@ public class ZombieAggro : MonoBehaviour {
 
     /*Reset anim variables*/
     void resetZombieAnimator() {
-        Debug.Log("Resetting animator variables");
+        //Debug.Log("Resetting animator variables");
         anim.SetBool("Attack1", false);
         anim.SetBool("Attack2", false);
     }

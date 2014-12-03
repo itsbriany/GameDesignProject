@@ -49,11 +49,6 @@ public class Health : MonoBehaviour {
 
 		if (isPlayer && health == 0)
 		{
-            if(ragdoll){
-                Transform rag = Instantiate(ragdoll, transform.position, transform.rotation) as Transform;
-                Destroy(gameObject);
-			    killDerik();
-            }
 			killDerik();
 		}
         else if (health == 0)
@@ -95,17 +90,11 @@ public class Health : MonoBehaviour {
         {
             derikSounds.dyingSound();
         }
-		//this.gameObject.anim
-		// remove points
-		// move Derik back to respawn position and add health back
-		//this.gameObject.transform.position = spawnPosition;
-		//health = 100.0f;
-		//scoresystem.addPoints(scoreAmt);
 		StartCoroutine(gameOver());
 	}
 
 	IEnumerator gameOver() {
-		yield return new WaitForSeconds(8);
+		yield return new WaitForSeconds(4);
 		gui = GameObject.FindGameObjectWithTag("WontBeDestroyed");
 		score = gui.GetComponent<Score>();
 		score.displayScore = false;
