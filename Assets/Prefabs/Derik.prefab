@@ -979,7 +979,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
   m_LocalRotation: {x: 0, y: -.0278696176, z: 0, w: .999611616}
-  m_LocalPosition: {x: 11.5006056, y: 1, z: -14.9707384}
+  m_LocalPosition: {x: 2.20000005, y: 8.14099979, z: 708.169983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400092}
@@ -1610,7 +1610,7 @@ MonoBehaviour:
   health: 100
   isPlayer: 1
   scoreAmt: -200
-  ragdoll: {fileID: 0}
+  ragdoll: {fileID: 400044, guid: a8926eb0a9639a14b84773e5eb7afb4a, type: 2}
   hud: {fileID: 0}
   scoresystem: {fileID: 0}
 --- !u!114 &11400004
@@ -1624,7 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e337d851de0db614bbecab2405773318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 0
+  energy: 100
   hud: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
